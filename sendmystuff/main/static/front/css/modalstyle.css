@@ -1,0 +1,11 @@
+.alert.alert-info,
+.button {
+  max-width: 600px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+
+#myModal {
+    z-index: 50000;
+}

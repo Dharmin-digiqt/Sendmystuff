@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.form1_container {
+  /* display: none; */
+  background-color: #ddd;
+  width: 60%;
+  margin: 100px auto;
+  padding: 20px;
+}
+
+.form1_container form {
+  display: grid;
+  grid-auto-rows: 90px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  column-gap: 15px;
+}
+
+.form2_container {
+  /* display: none; */
+  background-color: #ddd;
+  width: 60%;
+  margin: 100px auto;
+  padding: 20px;
+}
+
+.form2_container form {
+  display: grid;
+  grid-auto-rows: 90px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  column-gap: 15px;
+  text-align: center;
+}
+
+.form3_container {
+  /* display: none;*/
+  background-color: #ddd;
+  width: 60%;
+  margin: 100px auto;
+  padding: 20px;
+}
+
+.form3_container form {
+  display: grid;
+  grid-auto-rows: 90px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  column-gap: 15px;
+  text-align: center;
+}
+
+.form_container input,.form_container select {
+  width: 100%;
+  background: #eee;
+  padding: 10px;
+  font-size: 14px;
+  font-family: poppins;
+  line-height: 14px;
+  margin: 20px auto;
+  outline: none;
+  border: 1px solid transparent;
+}
+
+.form_container input[type=checkbox] {
+    cursor:pointer;
+}
+
+.form_container input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="tel"]:focus,
+select:focus {
+  border-color: #66afe9;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+    0 0 8px rgba(79, 158, 223, 0.6);
+}
+
+.form_container button {
+  padding: 10px;
+  font-size: 20px;
+  font-family: poppins;
+  line-height: 20 px;
+  margin: auto auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.form_container button.nxt_btn {
+  background: #5d6b82 none repeat scroll 0 0;
+  padding: 10px 30px;
+  border: none;
+  color: #fff;
+  transition: background 0.4s linear;
+  cursor: pointer;
+}
+
+.form_container button.nxt_btn:hover {
+  background: #f39c12 none repeat scroll 0 0;
+  transition: background 0.04s linear;
+}
+
+.form_container button.nxt_btn,
+button.addMaterialDetails:focus {
+  outline: none;
+}
+
+.form_container button.addMaterialDetails {
+  background: #1094f8;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 60px;
+  cursor: pointer;
+}
+
+.form_container button.addMoreMaterial {
+  border: 4px solid #1094f8;
+  border-radius: 5px;
+  padding: 10px 60px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.form_container button.addMoreMaterial:hover {
+  background: #1094f8;
+  border: 4px solid #eee;
+  color: #fff;
+  transition: all 0.02s linear;
+}
+
+.form_container button.generOTP {
+  border: none;
+  cursor: pointer;
+  border: 4px solid #1094f8;
+  transition: all 0.2s linear;
+}
+
+.form_container button.generOTP:hover {
+  background-color: #1094f8;
+  border: 4px solid #eee;
+  color: #fff;
+  transition: all 0.1s linear;
+}
+
+.form_container input::placeholder {
+  color: black;
+}
+
+.form_container #form3OTP {
+  display: none;
+}
+
+.form_container .agreement {
+  /* margin: 10px; */
+  font-size: 20px;
+  font-family: roboto;
+}
+
+/*copied*/
+      .radio_wrapper {
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        margin: 5px auto;
+        text-align:center;
+      }
+
+      /* The container */
+      .radio_wrapper .container {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      /* Hide the browser's default radio button */
+      .radio_wrapper .container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+      }
+
+      /* Create a custom radio button */
+      .radio_wrapper .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+        border-radius: 50%;
+      }
+
+      /* On mouse-over, add a grey background color */
+      .radio_wrapper .container:hover input ~ .checkmark {
+        background-color: #ccc;
+        transition: all 0.4s ease-in-out;
+      }
+
+      /* When the radio button is checked, add a blue background */
+      .radio_wrapper .container input:checked ~ .checkmark {
+        background-color: #2196f3;
+      }
+
+      /* Create the indicator (the dot/circle - hidden when not checked) */
+      .radio_wrapper .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+
+      /* Show the indicator (dot/circle) when checked */
+      .radio_wrapper .container input:checked ~ .checkmark:after {
+        display: block;
+      }
+
+      /* Style the indicator (dot/circle) */
+      .radio_wrapper .container .checkmark:after {
+        top: 9px;
+        left: 9px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: white;
+      }
+/*copied*/
+
+.dimension_fields {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    column-gap:10px;
+}

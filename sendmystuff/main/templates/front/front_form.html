@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="./Style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+<body>
+
+
+<button onclick="document.getElementById('need-a-truck-form').style.display='block'">Open Modal</button>
+
+<div id="need-a-truck-form" class="modal">
+  <span onclick="document.getElementById('need-a-truck-form').style.display='none'" class="close" title="Close Modal">×</span>
+  <form class="modal-content" action="/action_page.php">
+    <div class="container">
+        <div class="heading">
+            <h2>Need a Truck</h2><hr/>
+        </div>
+      <p><span style="color: #f44336;">*</span> mandatory fields should fillup first</p>
+        <div class="firsts">
+            <h3>Enter Load Deatails</h3>
+            <form>
+                <form class="form__Sec1">
+                    <div class="ffieldset">
+                        <select class="basic-info-select" name="cargo[material_type]" id="material_type" required="">
+                            <option value="">Please select</option>
+                            <option value="1">Alcohol &amp; Spirits</option>
+                            <option value="2">Automobile Component/ Battery/ Spares</option>
+                            <option value="3">Building Materials</option>
+                            <option value="4">Carbonated/ Non-Carbonated Beverages</option>
+                            <option value="5">Cement</option>
+                            <option value="6">Ceramic Items/ Bathroom Fittings &amp; Fixtures</option>
+                            <option value="7">Coils &amp; Tower</option>
+                            <option value="8">Container - 20 Feet</option>
+                            <option value="9">Container - 40 Feet</option>
+                            <option value="10">Dairy Products</option>
+                            <option value="11">Electronics / Consumer Durables</option>
+                            <option value="12">Fertilizers/ Agricultural Inputs</option>
+                            <option value="13">FMCG Products</option>
+                            <option value="14">Food Grains/Pulses/Cereals</option>
+                            <option value="15">Fruits &amp; Vegetables</option>
+                            <option value="16">Furniture &amp; Household Goods</option>
+                            <option value="17">Glass &amp; Glassware Products</option>
+                            <option value="18">Machinery/ Equipment/ Generators</option>
+                            <option value="19">Medicines/ Pharmaceutical Products/ Medical Instruments</option>
+                            <option value="20">Minerals</option>
+                            <option value="21">ODC</option>
+                            <option value="22">Oil Drums/ Barrels</option>
+                            <option value="23">Others</option>
+                            <option value="24">Packaged Food</option>
+                            <option value="25">Paints/Lubricants/ Chemicals</option>
+                            <option value="26">Paper/ Cartons/ Stationery Products</option>
+                            <option value="27">Personal Care/Hygiene Products</option>
+                            <option value="28">Plastic Items/ Granules/ Plastic Pipes</option>
+                            <option value="29">Plywood/ Veneer/ Laminates &amp; Other Wood Products</option>
+                            <option value="30">Processed Agricultural Products</option>
+                            <option value="31">Rubber Goods</option>
+                            <option value="32">Steel &amp; Metal Products</option>
+                            <option value="33">Textile/ Fabric/ Apparels</option>
+                            <option value="34">Tiles/ Stone</option>
+                            <option value="35">Vegetable Oil</option>
+                            <option value="36">Corrugated Box</option>
+                            <option value="37">Snacks &amp; Chips</option>
+                            <option value="38">Solar System item</option>
+                            <option value="39">PROMOTIONAL ITEMS</option>
+                            <option value="40">Malt</option>
+                            <option value="41">DETERGENT</option>
+                            <option value="42">Mattress</option>
+                        </select>
+                        <select class="basic-info-select" name="cargo[truck_type]" id="cargo_truck_type" required="">
+                            <option value="">Please select</option>
+                            <option value="1">LCV Open Body TATA 407 - 2.5 MT</option>
+                            <option value="2">LCV Open Body 14 Feet - 4 MT</option>
+                            <option value="3">LCV Open Body  17 Feet - 5 MT</option>
+                            <option value="4">LCV Open Body 19 Feet - 7 MT</option>
+                            <option value="5">LCV Closed Body TATA 407 - 2.5 MT</option>
+                            <option value="6">LCV Closed Body 14 Feet - 3.5 MT</option>
+                            <option value="7">LCV Closed Body 19 Feet - 7 MT</option>
+                            <option value="8">LCV Closed Body 17 Feet - 5 MT</option>
+                            <option value="9">Open Body Taurus - 6W - 9 MT</option>
+                            <option value="10">Open Body Taurus - 10W - 16 MT</option>
+                            <option value="11">Open Body Taurus - 12W - 21 MT</option>
+                            <option value="12">Open Body Taurus - 14W - 26 MT</option>
+                            <option value="13">Dala Body Taurus - 6W - 9 MT</option>
+                            <option value="14">Dala Body Taurus - 10W - 16 MT</option>
+                            <option value="15">Dala Body Taurus - 12W - 21 MT</option>
+                            <option value="16">Dala Body Taurus - 14W - 26 MT</option>
+                            <option value="17">Trailer 40 Feet - 20 MT</option>
+                            <option value="18">Trailer 40 Feet - 26 MT</option>
+                            <option value="19">ODC Trailer </option>
+                            <option value="20">Container SXL - 20 Feet - 7 MT</option>
+                            <option value="21">Container SXL - 24 Feet - 7 MT</option>
+                            <option value="22">Container SXL - 32 Feet - 7 MT</option>
+                            <option value="23">Container MXL - 20 Feet - 9 MT</option>
+                            <option value="24">Container MXL - 24 Feet - 14 MT</option>
+                            <option value="25">Container MXL - 32 Feet High Cube - 14 MT</option>
+                            <option value="26">Container MXL - 32 Feet - 14 MT</option>
+                            <option value="27">LCV open Body - 20 Feet - 7MT</option>
+                            <option value="28">Trailer 20 Feet </option>
+                            <option value="29">Container SXL - 32 Feet High Cube - 7MT</option>
+                            <option value="30">Container SXL  - 40 Feet - 15MT</option>
+                            <option value="31">less 750 kg</option>
+                        </select>
+                        <input type="number" class="numeric" maxlength="10" name="cargo[load_value]" id="cargo_load_value" value="" placeholder="Load Value (INR)" required="">
+                        <input type="text" placeholder="Pickup Location (City)" required=""/>
+                    </div>
+    
+                    <div class="sfieldset">
+                        <input type="number" maxlength="10" value="" placeholder="Weight (Ton)" required="">
+                        <select name="cargo[truck_count]" id="cargo_truck_count" class="basic-info-select" required="">
+                            <option value="">Trucks Required</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                          </select>
+                          <input type="date" placeholder="Loading Date" required=""/>
+                          <input type="text" placeholder="Drop Location (city)" required=""/>
+                        </div>
+                </form>
+
+                <br/><br/>
+                <h3>User Details</h3>
+                <fieldset>
+                    <div class="tab">
+                        <button class="tablinks" onclick="openCity(event, 'newuser')">New User</button>
+                        <button class="tablinks" onclick="openCity(event, 'signin')">Signin</button>
+                      </div>
+                      
+                      <div id="newuser" class="tabcontent">
+                        <input type="text" placeholder="company name" required="" />
+                        <input type="tel" placeholder="Mobile No." required="" />
+
+                        <p>User Type :</p>
+                        <input type="radio" id="transporter" name="user-type" value="transporter">
+                        <label for="transporter">transporter</label><br>
+                        <input type="radio" id="customer" name="user-type" value="customer">
+                        <label for="customer">customer</label><br>  
+                      
+                        <input type="text" name="name" placeholder="Your Name" required="" />
+                        <input type="email" name="email-id" placeholder="Email Id" required="" />
+
+                        <br/><button type="button" class="otp__button">Send OTP</button>
+                        <input type="text" placeholder="Enter OTP"/>
+
+                      </div>
+                      
+                      <div id="signin" class="tabcontent">
+                        <input name="email" type="text" placeholder="email id/mobile" />
+                        <input name="password" type="password" placeholder="password"/>
+                      </div>
+                      <div class="form__action">
+                          <button type="button" class="cancel__button">cancel</button>
+                          <button type="button" class="submit__button">submit</button>
+                      </div>
+                          
+                      
+                      <script>
+                      function openCity(evt, cityName) {
+                        var i, tabcontent, tablinks;
+                        tabcontent = document.getElementsByClassName("tabcontent");
+                        for (i = 0; i < tabcontent.length; i++) {
+                          tabcontent[i].style.display = "none";
+                        }
+                        tablinks = document.getElementsByClassName("tablinks");
+                        for (i = 0; i < tablinks.length; i++) {
+                          tablinks[i].className = tablinks[i].className.replace(" active", "");
+                        }
+                        document.getElementById(cityName).style.display = "block";
+                        evt.currentTarget.className += " active";
+                      }
+                      </script>
+                </fieldset>
+            </form>
+
+        </div>
+        
+
+
+
+
+      <!-- <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="deletebtn">Delete</button>
+      </div> -->
+    </div>
+  </form>
+</div>
+
+<script>
+    
+// Get the modal
+var modal = document.getElementById('need-a-truck-form');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>

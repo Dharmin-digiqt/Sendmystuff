@@ -1,0 +1,60 @@
+.SE3 {
+    margin-top: 150px;
+    margin-left: 20px;
+    text-align:center;
+}
+
+.SE3 h2 {
+margin-bottom: 50px;
+}
+.SE3 .SE3__wrapper {
+  /* background-color: #edf6f9; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  column-gap: 20px;
+  row-gap: 10px;
+  margin: 20px 15px;
+}
+
+.SE3__wrapper .SE3__Container {
+  box-sizing: border-box;
+  display: flex;
+  background-color: #e5e5e5;
+  text-align: center;
+  align-items: center;
+  box-shadow: 0 3px 10px #8f8f8f;
+}
+
+.SE3__Container .SE3__img {
+  height: 200px;
+  width: 200px;
+  box-sizing: border-box;
+}
+
+.SE3__Container .SE3__tag {
+  box-sizing: border-box;
+  margin: 10px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: #212529;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
+
+.SE3__Container .SE3__img {
+  background-size: cover;
+}
+
+.SE3__Container .SE3__img.SE3__img1 {
+  background-image: url("/static/front/img/se3img/expertise1.png");
+}
+
+.SE3__Container .SE3__img.SE3__img2 {
+  background-image: url("/static/front/img/se3img/expertise2.png");
+}
+
+.SE3__Container .SE3__img.SE3__img3 {
+  background-image: url("/static/front/img/se3img/expertise3.png");
+}

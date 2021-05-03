@@ -1,0 +1,129 @@
+{% extends 'front/form_master.html'%}
+{% load static%}
+
+{% block pagename %}
+<ul class="page-location" xmlns="http://www.w3.org/1999/html">
+    <h2>Contact</h2>
+    <li><a href="/">Home</a></li>
+    <li>/</li>
+    <li>Contact</li>
+</ul>
+{% endblock %}
+
+{% block mainblock %}
+
+<body class="single-page">
+
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a
+        href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!--- PRELOADER -->
+<div class="preeloader">
+    <div class="preloader-spinner"></div>
+</div>
+
+<!--SCROLL TO TOP-->
+<a href="#home" class="scrolltotop"><i class="fa fa-long-arrow-up"></i></a>
+
+
+<!--CONTACT US AREA-->
+<section class="contact-area" id="contact">
+    <div class="contact-form-area section-padding gray-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                    <div class="area-title text-center">
+                        <h3>Loading Details</h3>
+                        <br>
+                        <br>
+                        <form action="/contact/" method="post"> {% csrf_token %}
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                    <div class="form-group" id="name-field">
+                                        <div style="display:flex;flex-direction: row"
+                                             class="form-input">
+                                            <label style="flex:1" for="m_name">Name</label>
+                                            <input style="flex:2" type="text" class="form-control"
+                                                   id="form-email" name="material_weight"
+                                                   placeholder="Name" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                    <div class="form-group" id="email-field">
+                                        <div style="display:flex;flex-direction: row"
+                                             class="form-input">
+                                            <label style="flex:1" for="material_weight">Mobile
+                                                no</label>
+                                            <input style="flex:2" type="tel" class="form-control"
+                                                   id="form-email" name="material_weight"
+                                                   placeholder="mobile no" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                               <div class="row">
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                    <div class="form-group" id="email-field">
+                                        <div style="display:flex;flex-direction: row"
+                                             class="form-input">
+                                            <label style="flex:1"
+                                                   for="material_weight">Email</label>
+                                            <input style="flex:2" type="email" class="form-control"
+                                                   id="form-email" name="material_weight"
+                                                   placeholder="email" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                 <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                    <div class="form-group" id="email-field">
+                                        <div style="display:flex;flex-direction: row"
+                                             class="form-input">
+                                            <div style="flex:1"> <button style="padding:2px 6px; margin-right:40px">Send Otp</button><label style="text-align:center">Enter Otp</label></div>
+                                            <input style="flex:1" type="tel" class="form-control"
+                                                   id="form-email" name="material_weight"
+                                                   placeholder="otp" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                                    <div class="form-group">
+                                        <button type="submit">Back</button>
+                                        <button type="submit">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+</section>
+<!--CONTACT US AREA END-->
+
+</body>
+{% endblock %}
+
+{% block js %}
+<script>
+{% if thank %}
+alert("Thanks for Contacting us. We will back to soon!");
+document.location = "/contact";
+{% endif %}
+
+</script>
+
+{% endblock %}

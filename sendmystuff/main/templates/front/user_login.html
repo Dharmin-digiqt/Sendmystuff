@@ -1,0 +1,51 @@
+{% extends 'front/master.html'%}
+{% load static %}
+
+  
+{% block mainblock %}
+
+
+<!--3rd page-->
+    <div class="form_container form3_container">
+      <form action="#">
+        <input type="text" name="email" placeholder="Enter Email Id" />
+        <input
+          type="password"
+          name="form3_password"
+          placeholder="Create Password"
+        />
+        <input type="tel" maxlength="10" placeholder="Mobile no" />
+
+        <input type="text" name="form3_name" placeholder="Enter Name" />
+        <input
+          type="text"
+          name="form3_companyname"
+          placeholder="Enter Company Name"
+        />
+        <button class="generOTP">Generate OTP</button>
+        <input
+          type="text"
+          name="form3_otp"
+          placeholder="Enter OTP"
+          id="form3OTP"
+        />
+      </form>
+      <form action="#">
+        <div class="agreement">
+          <input
+            type="checkbox"
+            style="float: left"
+            name="form3_agree"
+            id="form3_agree"
+          />
+          <label for="form3_agree" style="user-select: none"
+            >By signing up, I agree to TruckGuru Terms of Service & Privacy
+            Policy</label
+          >
+        </div>
+      </form>
+      <button class="nxt_btn">Next</button>
+    </div>
+<!--3rd page end-->
+
+{% endblock %}

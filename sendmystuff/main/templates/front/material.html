@@ -1,0 +1,85 @@
+{% extends 'front/master.html'%}
+{% load static %}
+
+  
+{% block mainblock %}
+
+
+<!--    2nd page -->
+    <div class="form_container form2_container">
+      <h3 style="font-family: roboto; color: #5d6b82;text-decoration:lowercase;">Add Material Details</h3>
+      <form action="/user_login/" method="post">
+          {% csrf_token %}
+        <button class="btn btn-primary btn-lg addMaterialDetails"
+                data-toggle="modal"
+                data-target="#materialDimensionDetails">
+          <span><i class="fa fa-star"></i></span>Add Material
+          <span>1</span> Details
+        </button>
+        <button class="addMoreMaterial">Add More Materials</button>
+        <input type="submit" value="Next" class="nxt_btn"/>
+      </form>
+    </div>
+<!--material detail modal-->
+    <div class="modal fade" id="materialDimensionDetails">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Add MAterial Details</h4>
+<!--          <button type="button" class="close" data-dismiss="modal">&times;</button>-->
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body form_container">
+             <form action="#">
+                <input type="text" name="materialname" placeholder="Enter Material Name. . ." /><hr/>
+                <h4>Add Dimensions</h4>
+                <div class="radio_wrapper">
+                  <label class="container"
+                    >in
+                    <input type="radio" checked="checked" name="radio" value="in" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container"
+                    >mm
+                    <input type="radio" name="radio" value="mm" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container"
+                    >cm
+                    <input type="radio" name="radio" value="cm" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container"
+                    >ft
+                    <input type="radio" name="radio" value="ft" />
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+
+                <div class="dimension_fields">
+                    <input type="number" placeholder="Length" name="length">
+                    <input type="number" placeholder="Width" name="width">
+                    <input type="number" placeholder="Height" name="height">
+                    <input type="number" placeholder="Enter Weight (in KG)" name="kgweight">
+                    <input type="number" placeholder="Enter No of Items" name="noofitem">
+                </div><hr/>
+            </form>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+<!--material detail modal end-->
+<!--    2nd page end-->
+
+
+
+{% endblock %}

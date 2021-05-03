@@ -1,0 +1,200 @@
+{% extends 'front/master.html'%}
+{% load static %}
+
+  
+{% block mainblock %}
+<!--1st page-->
+    <div class="form_container form1_container">
+      <form action="#">
+        <input type="date" name="form_date" />
+
+        <!-- <label for="serviceType">Select Service Type :</label> -->
+        <select
+          style="border: 1px solid lightgray; width: 100%; border-radius: 3px"
+          name="service"
+          id="servicetype"
+        >
+          <option value="#">Select Service Type :</option>
+          <option value="Business">
+            Business - Industrial, Commercial or Enterprise Goods
+          </option>
+          <option value="Personal">
+            Personal - Household or personal Goods
+          </option>
+        </select>
+
+        <select
+          style="border: 1px solid lightgray; width: 100%; border-radius: 3px"
+          name="service"
+          id="goodtype"
+        >
+          <option value="#">Select Good Type :</option>
+          <option value="Industrial Machinery">Industrial Machinery</option>
+          <option value="Household">Household Goods</option>
+          <option value="PartLoad Not available">
+            PartLoad / Parcel / luggage transport Request (N.A)
+          </option>
+          <option value="Rice Wheat Grains">Rice / Wheat / Grains (N.A)</option>
+          <option value="Fruits Vegetables not available">
+            Fresh Fruits / Vegetables (N.A)
+          </option>
+          <option value="FMCG Packed Food">FMCG / Packed Food Products</option>
+          <option value="Healthcare Products">
+            Healthcare / Pharmacy Products / Medicines
+          </option>
+          <option value="Chemicals Liquid Barrels">
+            Chemicals Powder / Liquid Barrels
+          </option>
+          <option value="Fertilizer">Fertilizer (N.A)</option>
+          <option value="Electronics Home Appliances">
+            Electronic Goods / Home Appliances
+          </option>
+          <option value="Packaging Material">
+            Paper / Packaging / Printed Material
+          </option>
+          <option value="Electrical Panels Spare Parts">
+            Electrical Transformer / Panels / Equipments / Spare Parts
+          </option>
+        </select>
+
+        <select
+          style="border: 1px solid lightgray; width: 100%; border-radius: 3px"
+          name="service"
+          id="trucktype"
+        >
+          <option value="#">Truck Type (Full Truck Only)</option>
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
+          <option value="D">D</option>
+          <option value="E">E</option>
+        </select>
+
+        <input
+          type="number"
+          name="goodWeight"
+          placeholder="Enter Good's Weight"
+        />
+      </form>
+      <button class="nxt_btn nxtone">Next</button>
+    </div>
+<!--1st page end-->
+
+<!--    2nd page -->
+    <div class="form_container form2_container">
+      <h3 style="font-family: roboto; color: #5d6b82;text-decoration:lowercase;">Add Material Details</h3>
+      <form action="#">
+        <button class="btn btn-primary btn-lg addMaterialDetails"
+                data-toggle="modal"
+                data-target="#materialDimensionDetails">
+          <span><i class="fa fa-star"></i></span>Add Material
+          <span>1</span> Details
+        </button>
+        <button class="addMoreMaterial">Add More Materials</button>
+        <button class="nxt_btn">Next</button>
+      </form>
+    </div>
+<!--material detail modal-->
+    <div class="modal fade" id="materialDimensionDetails">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Add MAterial Details</h4>
+<!--          <button type="button" class="close" data-dismiss="modal">&times;</button>-->
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body form_container">
+             <form action="#">
+                <input type="text" name="materialname" placeholder="Enter Material Name. . ." /><hr/>
+                <h4>Add Dimensions</h4>
+                <div class="radio_wrapper">
+                  <label class="container"
+                    >in
+                    <input type="radio" checked="checked" name="radio" value="in" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container"
+                    >mm
+                    <input type="radio" name="radio" value="mm" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container"
+                    >cm
+                    <input type="radio" name="radio" value="cm" />
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container"
+                    >ft
+                    <input type="radio" name="radio" value="ft" />
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+
+                <div class="dimension_fields">
+                    <input type="number" placeholder="Length" name="length">
+                    <input type="number" placeholder="Width" name="width">
+                    <input type="number" placeholder="Height" name="height">
+                    <input type="number" placeholder="Enter Weight (in KG)" name="kgweight">
+                    <input type="number" placeholder="Enter No of Items" name="noofitem">
+                </div><hr/>
+            </form>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+<!--material detail modal end-->
+<!--    2nd page end-->
+
+<!--3rd page-->
+    <div class="form_container form3_container">
+      <form action="#">
+        <input type="text" name="email" placeholder="Enter Email Id" />
+        <input
+          type="password"
+          name="form3_password"
+          placeholder="Create Password"
+        />
+        <input type="tel" maxlength="10" placeholder="Mobile no" />
+
+        <input type="text" name="form3_name" placeholder="Enter Name" />
+        <input
+          type="text"
+          name="form3_companyname"
+          placeholder="Enter Company Name"
+        />
+        <button class="generOTP">Generate OTP</button>
+        <input
+          type="text"
+          name="form3_otp"
+          placeholder="Enter OTP"
+          id="form3OTP"
+        />
+      </form>
+      <form action="#">
+        <div class="agreement">
+          <input
+            type="checkbox"
+            style="float: left"
+            name="form3_agree"
+            id="form3_agree"
+          />
+          <label for="form3_agree" style="user-select: none"
+            >By signing up, I agree to TruckGuru Terms of Service & Privacy
+            Policy</label
+          >
+        </div>
+      </form>
+      <button class="nxt_btn">Next</button>
+    </div>
+<!--3rd page end-->
+
+{% endblock %}

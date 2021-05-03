@@ -1,0 +1,68 @@
+.SE6 {
+ position:relative;
+ margin: 100px auto;
+
+}
+
+.SE6__bg {
+ background-image: linear-gradient(to right,rgba(2, 53, 121,.9), rgba(255,255,255,.5)), url('/static/front/img/se6img/truck.jpg');
+ background-size: cover;
+ background-position: center center;
+ background-attachment: fixed;
+/* background-color: #1fdaff;
+ background-blend-mode:multiply;
+ filter: drop-shadow(8px 8px 10px gray);
+    opacity: 0.2 !important;*/
+}
+
+
+@media screen and (max-width: 1024px) {
+    .SE6 {
+        margin: 50px auto;
+    }
+}
+
+.SE6 h2.SE6__heading {
+  font-family: "Rubik", sans-serif;
+  text-align: center;
+  color:#edf6f9;
+  margin: 50px auto;
+}
+
+.SE6__wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  column-gap: 10px;
+  text-align: center;
+  row-gap: 10px;
+  margin: 20px;
+}
+
+.SE6__wrapper .SE6__Container {
+  box-sizing: border-box;
+  /* background-color: rgba(32, 27, 27, 0.856); */
+}
+
+.SE6__Container .SE6__icon {
+  /* width: 200px; */
+  /* height: 200px; */
+  /* background-color: greenyellow; */
+  margin: 20px;
+}
+
+.SE6__Container .SE6__icon i {
+  border: 5px solid #edf6f9;
+  color:#edf6f9;
+  font-size: 100px;
+  padding: 20px;
+  border-radius: 50%;
+}
+
+.SE6__wrapper .SE6__Container p {
+  font-weight: 700;
+  font-size: 18px;
+  margin: 10px;
+  font-family: "Rubik", sans-serif;
+  color:#edf6f9;
+  letter-spacing: 1px;
+}

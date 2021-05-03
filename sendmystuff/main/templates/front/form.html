@@ -1,0 +1,216 @@
+{% extends 'front/form_master.html'%}
+{% load static%}
+
+{% block pagename %}
+<ul class="page-location">
+    <h2>Contact</h2>
+    <li><a href="/">Home</a></li>
+    <li>/</li>
+    <li>Contact</li>
+</ul>
+{% endblock %}
+
+{% block mainblock %}
+
+<body class="single-page">
+
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a
+        href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!--- PRELOADER -->
+<div class="preeloader">
+    <div class="preloader-spinner"></div>
+</div>
+
+<!--SCROLL TO TOP-->
+<a href="#home" class="scrolltotop"><i class="fa fa-long-arrow-up"></i></a>
+
+
+<!--CONTACT US AREA-->
+<section class="contact-area" id="contact">
+    <div class="contact-form-area section-padding gray-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                    <div class="area-title text-center">
+                        <h3>Loading Details</h3>
+                        <br>
+                        <br>
+                        <form action="/form_two/" method="post"> {% csrf_token %}
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                    <div class="form-group" id="name-field">
+                                        <div style="display:flex;flex-direction: row"
+                                             class="form-input">
+                                            <label style="flex:1" for="m_name">Material Type</label>
+                                            <select style="flex:2; outline: none; padding: 10px; border: 1px solid #ccc; width: 100%;"
+                                                    class="basic-info-select" name="m_name"
+                                                    id="material_type" required="">
+                                                <option value="">Please select</option>
+                                                <option value="1">Alcohol &amp; Spirits</option>
+                                                <option value="2">Automobile Component/ Battery/
+                                                    Spares
+                                                </option>
+                                                <option value="3">Building Materials</option>
+                                                <option value="4">Carbonated/ Non-Carbonated
+                                                    Beverages
+                                                </option>
+                                                <option value="5">Cement</option>
+                                                <option value="6">Ceramic Items/ Bathroom Fittings
+                                                    &amp; Fixtures
+                                                </option>
+                                                <option value="7">Coils &amp; Tower</option>
+                                                <option value="8">Container - 20 Feet</option>
+                                                <option value="9">Container - 40 Feet</option>
+                                                <option value="10">Dairy Products</option>
+                                                <option value="11">Electronics / Consumer Durables
+                                                </option>
+                                                <option value="12">Fertilizers/ Agricultural
+                                                    Inputs
+                                                </option>
+                                                <option value="13">FMCG Products</option>
+                                                <option value="14">Food Grains/Pulses/Cereals
+                                                </option>
+                                                <option value="15">Fruits &amp; Vegetables</option>
+                                                <option value="16">Furniture &amp; Household Goods
+                                                </option>
+                                                <option value="17">Glass &amp; Glassware Products
+                                                </option>
+                                                <option value="18">Machinery/ Equipment/
+                                                    Generators
+                                                </option>
+                                                <option value="19">Medicines/ Pharmaceutical
+                                                    Products/ Medical Instruments
+                                                </option>
+                                                <option value="20">Minerals</option>
+                                                <option value="21">ODC</option>
+                                                <option value="22">Oil Drums/ Barrels</option>
+                                                <option value="23">Others</option>
+                                                <option value="24">Packaged Food</option>
+                                                <option value="25">Paints/Lubricants/ Chemicals
+                                                </option>
+                                                <option value="26">Paper/ Cartons/ Stationery
+                                                    Products
+                                                </option>
+                                                <option value="27">Personal Care/Hygiene Products
+                                                </option>
+                                                <option value="28">Plastic Items/ Granules/ Plastic
+                                                    Pipes
+                                                </option>
+                                                <option value="29">Plywood/ Veneer/ Laminates &amp;
+                                                    Other Wood Products
+                                                </option>
+                                                <option value="30">Processed Agricultural Products
+                                                </option>
+                                                <option value="31">Rubber Goods</option>
+                                                <option value="32">Steel &amp; Metal Products
+                                                </option>
+                                                <option value="33">Textile/ Fabric/ Apparels
+                                                </option>
+                                                <option value="34">Tiles/ Stone</option>
+                                                <option value="35">Vegetable Oil</option>
+                                                <option value="36">Corrugated Box</option>
+                                                <option value="37">Snacks &amp; Chips</option>
+                                                <option value="38">Solar System item</option>
+                                                <option value="39">PROMOTIONAL ITEMS</option>
+                                                <option value="40">Malt</option>
+                                                <option value="41">DETERGENT</option>
+                                                <option value="42">Mattress</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                    <div class="form-group" id="email-field">
+                                        <div style="display:flex;flex-direction: row"
+                                             class="form-input">
+                                            <label style="flex:1" for="material_weight">Material
+                                                Weight</label>
+                                            <input style="flex:2" type="number" class="form-control"
+                                                   id="form-email" name="material_weight"
+                                                   placeholder="Material Weight" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                    <div class="form-group" id="name-field">
+                                        <div style="display:flex;flex-direction: row"
+                                             class="form-input">
+                                            <label style="flex:1">Material Dimensions</label>
+                                            <div style="display:flex;flex-direction: row; flex:2">
+                                                <input type="number" class="form-control"
+                                                       id="form-email" name="m_Length"
+                                                       placeholder="Length" required>
+                                                <input type="number" class="form-control"
+                                                       id="form-email" name="m_Width"
+                                                       placeholder="Width" required>
+                                                <input type="number" class="form-control"
+                                                       id="form-email" name="m_Height"
+                                                       placeholder="Height" required></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                    <div class="form-group" id="email-field">
+                                        <div style="display:flex;flex-direction: row"
+                                             class="form-input">
+                                            <label style="flex:1" for="loading_date">Loading
+                                                Date</label>
+                                            <input style="flex:2" type="date" class="form-control"
+                                                   id="form-email" name="loading_date" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                             <div class="row">
+                                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                                    <div class="form-group">
+                                        <button type="submit">Back</button>
+                                        <button type="submit">Next</button>
+                                    </div>
+                                </div>
+                            </div>
+<!--                            <div class="row">-->
+<!--                                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">-->
+<!--                                    <div class="form-group">-->
+<!--                                        &lt;!&ndash;                                            <button type="">Back</button>&ndash;&gt;-->
+<!--                                        &lt;!&ndash;                                            <button type="submit">Next</button>&ndash;&gt;-->
+<!--                                        &lt;!&ndash;                                            <a href="form2/" class="btn btn-primary">submit</a>&ndash;&gt;-->
+<!--                                        &lt;!&ndash;                                             <input type="submit" value="Go to Google" />&ndash;&gt;-->
+<!--                                        <input-->
+<!--                                                type="submit"-->
+<!--                                                class="btn btn-primary btn-lg"-->
+<!--                                                value="Next"/>-->
+
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+</section>
+<!--CONTACT US AREA END-->
+
+</body>
+{% endblock %}
+
+{% block js %}
+<script>
+{% if thank %}
+alert("Thanks for Contacting us. We will back to soon!");
+document.location = "/contact";
+{% endif %}
+
+</script>
+
+{% endblock %}

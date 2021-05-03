@@ -1,0 +1,147 @@
+{% extends 'front/blog_master.html'%}
+{% load static%}
+
+ {% block pagename %}
+        <ul class="page-location">
+            <h2>Blog</h2>
+            <li><a href="#">Home</a></li>
+            <li>/</li>
+            <li>Blog</li>
+        </ul>
+{% endblock %}
+
+{% block mainblock %}
+
+<body class="single-page">
+
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a
+        href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!--- PRELOADER -->
+<div class="preeloader">
+    <div class="preloader-spinner"></div>
+</div>
+
+<!--SCROLL TO TOP-->
+<a href="#home" class="scrolltotop"><i class="fa fa-long-arrow-up"></i></a>
+
+
+<!--BLOG AREA-->
+<section class="blog-area blog-page section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
+
+                {% for i in page_obj %}
+                <div class="single-blog wow fadeIn">
+                    <div class="blog-image">
+                        <img src="/media/{{i.image}}" alt="">
+                    </div>
+                    <div class="blog-details">
+
+                        <div class="blog-meta"><a href="#"><i class="fa fa-ship"></i></a></div>
+                        <h3><a href="single-blog.html">{{ i.title }}</a>
+                        </h3>
+                        <div class="post-date"><a href="#"><i class="fa fa-calendar"></i>20 January,
+                            2015</a></div>
+
+
+                        <p>{{i.description}}</p>
+
+
+                        <a href="/blog/detail/" class="read-more">Read More</a>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+            <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                <div class="sidebar-area wow fadeIn">
+                    <div class="single-sidebar-widget widget_search">
+                        <h4>Search</h4>
+                        <form action="#">
+                            <input type="text" name="s" id="s" placeholder="Search Here...">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="single-sidebar-widget widget_categories">
+                        <h4>Categories</h4>
+                        <ul>
+                            <li><a href="#">Road Freight</a></li>
+                            <li><a href="#">Air Freight</a></li>
+                            <li><a href="#">Sea Freight</a></li>
+                            <li><a href="#">Ware House Freight</a></li>
+                            <li><a href="#">Rail Freight</a></li>
+                        </ul>
+                    </div>
+                    <div class="single-sidebar-widget widget_recent_entries">
+                        <h4>Latest Post</h4>
+                        <ul>
+                            <li>
+                                <div class="alignleft"><img src="{%static 'front/img/blog/thumb-1.jpg' %}" alt=""></div>
+                                <a href="#">2016 Latest News From Logistics Transportation
+                                    Service.</a>
+                            </li>
+                            <li>
+                                <div class="alignleft"><img src="{%static 'front/img/blog/thumb-2.jpg' %}" alt=""></div>
+                                <a href="#">2016 Latest News From Logistics Cargo Service.</a>
+                            </li>
+                            <li>
+                                <div class="alignleft"><img src="{%static 'front/img/blog/thumb-3.jpg' %}" alt=""></div>
+                                <a href="#">2016 Latest News From Logistics Transportation
+                                    Service.</a>
+                            </li>
+                            <li>
+                                <div class="alignleft"><img src="{%static 'front/img/blog/thumb-4.jpg' %}" alt=""></div>
+                                <a href="#">2016 Latest News From Logistics Cargo Service.</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="single-sidebar-widget widget_tag_cloud">
+                        <h4>Pupular Tags</h4>
+                        <div class="tagcloud">
+                            <a href="#">Design</a>
+                            <a href="#">Transport</a>
+                            <a href="#">Cargo</a>
+                            <a href="#">Freight</a>
+                            <a href="#">Logistic</a>
+                            <a href="#">Truck</a>
+                            <a href="#">Shipping</a>
+                            <a href="#">ware house</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <nav aria-label="Page navigation example">
+
+              <ul class="pagination">
+
+                <li class="page-item">
+                  {% if page_obj.has_previous %}
+                      <a class="page-link" href="?page={{page_obj.previous_page_number}}" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                      </a>
+                  {% endif %}
+                </li>
+
+                    <li class="page-item"><a class="page-link" href="">{{page_obj.number}}</a></li>
+
+                <li class="page-item">
+                  {% if page_obj.has_next %}
+                      <a class="page-link" href="?page={{page_obj.next_page_number}}" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                      </a>
+                  {% endif %}
+                </li>
+
+              </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+<!--BLOG AREA END-->
+{% endblock%}
